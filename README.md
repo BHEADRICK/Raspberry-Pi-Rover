@@ -18,7 +18,7 @@ On the hostapd.conf file, you can go a few different ways, but my plan is to set
 
 The nodejs that gets installed through the standard apt repository at the present moment is a bit buggy, so we need to install amore current version. I've found This script to work flawlessly:
 
-sudo apt-get install git && git clone https://github.com/audstanley/NodeJs-Raspberry-Pi-Arm7 && cd NodeJs-Raspberry-Pi-Arm7 && chmod +x Install-Node.sh && sudo ./Install-Node.sh;
+sudo apt-get install git && git clone https://github.com/BHEADRICK/NodeJs-Raspberry-Pi.git && cd NodeJs-Raspberry-Pi && chmod +x Install-Node.sh && sudo ./Install-Node.sh;
 
 ## Setup Node Server
 
