@@ -23,5 +23,9 @@ sudo apt-get install git -y && git clone https://github.com/BHEADRICK/NodeJs-Ras
 
 ### Setup Node Server
 
+You need to install one prerequisite first:
+`sudo apt-get install wiringpi`
+and a couple npm prerequisites:
+`sudo npm install -g node-gyp node-pre-gyp raspi`
 Clone this repository...
 
