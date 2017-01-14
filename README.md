@@ -28,6 +28,7 @@ You need to install one prerequisite first:
 and a couple npm prerequisites:
 `sudo npm install -g node-gyp node-pre-gyp raspi`
 
+
 For the pins to connect your H bridge(s) to , I had to consult this page:
 https://github.com/nebrius/raspi-io/wiki/Pin-Information
  On the Pi 3b, P1-33 is wPi pin 23, and P1-35 is wPi pin 24
@@ -36,5 +37,4 @@ https://github.com/nebrius/raspi-io/wiki/Pin-Information
 `		gpio readall	`
  ...to figure out the physical pin numbers from that
  
-Clone this repository...
 
