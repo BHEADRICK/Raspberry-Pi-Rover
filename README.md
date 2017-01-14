@@ -53,6 +53,12 @@ If you don't have access to a 3d printer, or just dont want to wait for all of t
 https://hobbyking.com/en_us/dg012-tank-sv-standard-version-multi-chassis-kit-with-two-rubber-tracks.html
 http://www.robotshop.com/en/mini-robotshop-rover-chassis-kit.html?gclid=CjwKEAiAtefDBRDTnbDnvM735xISJABlvGOvfZY6jPIlsZMAIqKYJJmUVULqziKxXB3V3B1RajcsLBoCIcrw_wcB
 
+### Motor Driver
+The pi doesn't output enough power to run a motor - that's wher the driver comes in, it takes the pwm and directional output from the pi and amplifies the power. The one below is good enough to handle 2 amps, wich is more than enough for any tiny motors you might use
+
 Either way, you'll also need a directional H Bridge. One of these is all you need. 
 https://www.amazon.com/gp/product/B014KMHSW6/ref=s9_simh_gw_g60_i1_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=&pf_rd_r=8KB73H1J0DH6CSWBRJKD&pf_rd_t=36701&pf_rd_p=a6aaf593-1ba4-4f4e-bdcc-0febe090b8ed&pf_rd_i=desktop
 
+### Power Supply
+A cheap and easy solution is just get a small power bank. Here's the one I'm using:
+https://www.amazon.com/Jackery-Premium-3350mAh-Portable-Charger/dp/B00AA6CS86/ref=sr_1_8?ie=UTF8&qid=1484406646&sr=8-8&keywords=power+bank+jackery
