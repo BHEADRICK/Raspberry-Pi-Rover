@@ -2,10 +2,11 @@
 
 The idea is to have a rover (potentially with an fpv camera) controlled by a mobile device. We will use Ionic framework for the app on the mobile device. The app will interface with the raspberry pi GPIO through the use of a node server running on the pi. We can stream the video from the fpv camera to the app as well. 
 
-##There are 3 parts to this. 
+##There are 4 parts to this. 
 *First is the connection to the rover - we will connect a mobile device to the rover by setting the pi up as a hotspot. 
 *Second is the software on the pi to control the rover along with a REST API server to accept commands
 *Third is a mobile app to interface with the REST API - we'll use Ionic Framework for this
+*Fourth - The hardware
 
 ##Install software on the Pi:
 
@@ -37,4 +38,8 @@ https://github.com/nebrius/raspi-io/wiki/Pin-Information
 `		gpio readall	`
  ...to figure out the physical pin numbers from that
  
+### Mobile app
+Here's the repo for that:
+https://github.com/BHEADRICK/Raspberrry-Pi-Rover-App
 
+It's still a work in progress but it's already to the point of being able to control the rover. I just haven't added in the interface to help you connect to the hotspot on the pi or set up the video streaming yet...
