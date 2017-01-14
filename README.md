@@ -38,8 +38,21 @@ https://github.com/nebrius/raspi-io/wiki/Pin-Information
 `		gpio readall	`
  ...to figure out the physical pin numbers from that
  
-### Mobile app
+## Mobile app
 Here's the repo for that:
 https://github.com/BHEADRICK/Raspberrry-Pi-Rover-App
 
 It's still a work in progress but it's already to the point of being able to control the rover. I just haven't added in the interface to help you connect to the hotspot on the pi or set up the video streaming yet...
+
+## Hardware
+What I'm working with is this: http://www.thingiverse.com/thing:1240754
+It lists all the non-printable items to get it working other than the control board and motor drivers (more about that below)
+
+
+If you don't have access to a 3d printer, or just dont want to wait for all of that printing, as it's pretty intricate, there are a few affordable options out there: 
+https://hobbyking.com/en_us/dg012-tank-sv-standard-version-multi-chassis-kit-with-two-rubber-tracks.html
+http://www.robotshop.com/en/mini-robotshop-rover-chassis-kit.html?gclid=CjwKEAiAtefDBRDTnbDnvM735xISJABlvGOvfZY6jPIlsZMAIqKYJJmUVULqziKxXB3V3B1RajcsLBoCIcrw_wcB
+
+Either way, you'll also need a directional H Bridge. One of these is all you need. 
+https://www.amazon.com/gp/product/B014KMHSW6/ref=s9_simh_gw_g60_i1_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=&pf_rd_r=8KB73H1J0DH6CSWBRJKD&pf_rd_t=36701&pf_rd_p=a6aaf593-1ba4-4f4e-bdcc-0febe090b8ed&pf_rd_i=desktop
+
