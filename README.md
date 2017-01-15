@@ -28,7 +28,11 @@ You need to install one prerequisite first:
 `sudo apt-get install wiringpi`
 and a couple npm prerequisites:
 `sudo npm install -g node-gyp node-pre-gyp raspi`
+### Clone this repository
+go back to /home/pi and type:
+`git clone https://github.com/BHEADRICK/Raspberry-Pi-Rover.git`
 
+You may wish to edit the index.js inside
 
 For the pins to connect your H bridge(s) to , I had to consult this page:
 https://github.com/nebrius/raspi-io/wiki/Pin-Information
@@ -37,12 +41,54 @@ https://github.com/nebrius/raspi-io/wiki/Pin-Information
  you can use the command ...
 `		gpio readall	`
  ...to figure out the physical pin numbers from that
+You can start it up by running
+`sudo node index.js`
+You don't usually have to run node as sudo, but since we have hardware access here, you need to run as sudo.
+
+#### Make the node server run on startup
+This part can be a bit tricky, but luckily, there are a couple packages out there that help with this. 
+There's:
+* Forever - https://github.com/foreverjs/forever
+* PM2 - https://github.com/Unitech/pm2
+ 
+ I like PM2 better because it will add itself to your startup with a simple command. 
+ First, we have to install it:
+ `sudo npm install -g pm2`
+ You may see a warning about fsevent not being compatible - don't worry, we don't need it. 
+ now, the simple command to start this up is:
+ `pm2 start /home/pi/Raspberry-Pi-Rover/index.js`
+ But, for me, at least, the command wasn't immediately available - there's a way to fix this, but since we only need to run it a couple times and it has to be run by sudo anyway, it's not worth the effort. 
+ 
+ First, we need to locate pm2:
+ `whereis pm2`
+ Use that full path to run pm2 - for me, it's:
+ `/opt/nodejs/bin/pm2`
+ so, that means we need to first run this command:
+ `sudo /opt/nodejs/bin/pm2 start /home/pi/Raspberry-Pi-Rover/index.js`
+ And then:
+ `sudo /opt/nodejs/bin/pm2 startup`
+ Now, our node server will start on boot
+ ### Video stream
+ There are a few different options out there, but this seems to be the best balance of frame rate and lag:
+ http://elinux.org/RPi-Cam-Web-Interface
+ 
+ It's super easy to install and setup:
+ `git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
+cd RPi_Cam_Web_Interface
+chmod u+x *.sh
+sudo ./install.sh`
+
+You will be prompted for a few things along the way - for the most part, the choices don't matter. Nginx is generally more lightweight than Apache, but for something like this, the difference will be negligible. 
+
+You'll also be prompted for the path to use. Choose the default option. This one matters, since it needs to be consistent with what's in the mobile app. 
+
+It will automatically set itself up to run on startup, so we don't have to do anything for that. 
  
 ## Mobile app
 Here's the repo for that:
 https://github.com/BHEADRICK/Raspberrry-Pi-Rover-App
 
-It's still a work in progress but it's already to the point of being able to control the rover. I just haven't added in the interface to help you connect to the hotspot on the pi or set up the video streaming yet...
+It's still a work in progress but it's already to the point of being able to control the rover. I just haven't added in the interface to help you connect to the hotspot on the pi...
 
 ## Hardware
 What I'm working with is this: http://www.thingiverse.com/thing:1240754
