@@ -7,7 +7,7 @@ var board = new five.Board({
 });
  
 board.on('ready', function() {
-var led = (new five.Led('P1-33'));
+
 var l_motor = five.Motor(['P1-33', 'P1-35']);
 // the first is the pwm pin, the second one is direction
 
