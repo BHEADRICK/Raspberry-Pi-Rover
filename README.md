@@ -106,5 +106,6 @@ Either way, you'll also need a directional H Bridge. One of these is all you nee
 https://www.amazon.com/gp/product/B014KMHSW6/ref=s9_simh_gw_g60_i1_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=&pf_rd_r=8KB73H1J0DH6CSWBRJKD&pf_rd_t=36701&pf_rd_p=a6aaf593-1ba4-4f4e-bdcc-0febe090b8ed&pf_rd_i=desktop
 
 ### Power Supply
-A cheap and easy solution is just get a small power bank. Here's the one I'm using:
-https://www.amazon.com/Jackery-Premium-3350mAh-Portable-Charger/dp/B00AA6CS86/ref=sr_1_8?ie=UTF8&qid=1484406646&sr=8-8&keywords=power+bank+jackery
+I originaly used a small power bank to power the Pi plus a few AA batteries to power the motors, but I discovered that this did not have enough power to move the rover with the treads on. (The wheels would spin, but when you set it down, it wouldn't go anywhere). I later discovered that the best option is to use the type of battery typically used by drones. I haven't really experimented to determine what AH rating is ideal, but this is what was recommended:
+https://www.amazon.com/GOLDBAT-5000mAh-Hardcase-Battery-Airplane/dp/B07QSF3LSS/
+Of course, there's some additional circuitry required to use this to power the PI as well as the motors. (The raspi doesn't have a voltage regulator if you power it through the pins.)
